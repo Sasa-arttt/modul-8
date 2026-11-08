@@ -1,0 +1,35 @@
+# ===== UJI UTAMA =====
+LIHAT
+TULIS 6 12 -4 7 0 15 6
+AMBIL 2
+TULIS 3 9 11 -2
+TULIS 2 9 -2
+RINGKAS
+LIHAT
+SELESAI
+EOF 
+
+
+ 
+cat > ../tests/uji_tambahan.txt <<'EOF'
+# ===== PERSIAPAN =====
+TULIS 6 12 -4 7 0 15 6
+AMBIL 2
+TULIS 3 9 11 -2
+TULIS 2 9 -2
+# ===== F1: AMBIL 7 ditolak, AMBIL 6 keluar semua, AMBIL 1 ditolak =====
+AMBIL 7
+LIHAT
+AMBIL 6
+LIHAT
+AMBIL 1
+# ===== F2: TULIS 2 4 1001 ditolak, TULIS 1 -1 bernomor 9 =====
+TULIS 2 4 1001
+TULIS 1 -1
+LIHAT
+# ===== F3: KOSONGKAN lalu isi ulang =====
+KOSONGKAN
+TULIS 4 1000 -1000 0 5
+LIHAT
+RINGKAS
+SELESAI
